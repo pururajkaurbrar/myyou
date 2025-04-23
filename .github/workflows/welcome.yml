@@ -4,6 +4,9 @@ on:
   pull_request:
     types: [opened]
 
+permissions:
+  pull-requests: write
+
 jobs:
   greet:
     runs-on: ubuntu-latest
@@ -14,4 +17,5 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           pr-message: |
             👋 Hi there! Thanks for opening your first pull request!
-            We appreciate your contribution. Please make sure to follow the contribution guidelines.
+            We appreciate your contribution. Please make sure to follow the contribution guidelines.
+
